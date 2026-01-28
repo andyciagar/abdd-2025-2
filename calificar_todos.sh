@@ -325,15 +325,18 @@ calificar_estudiante() {
       \"cedula\": \"$student_id\",
       \"rama\": \"$branch\",
       \"calificacion\": {
-        \"total\": $total_pts,
-        \"nota\": \"$nota\",
+        \"arquitectura\": $total_pts,
+        \"replicacion_manual\": \"pendiente\",
+        \"total\": \"$total_pts + manual\",
+        \"nota_arquitectura\": \"$nota\",
         \"aprobado\": $aprobado
       },
       \"desglose\": {
-        \"docker_compose\": { \"obtenido\": $docker_compose_pts, \"maximo\": 30 },
-        \"contenedores\": { \"obtenido\": $contenedores_pts, \"maximo\": 25 },
-        \"bases_datos\": { \"obtenido\": $bd_funcionamiento_pts, \"maximo\": 20 },
-        \"symmetricds\": { \"obtenido\": $symmetricds_pts, \"maximo\": 25 }
+        \"docker_compose\": { \"obtenido\": $docker_compose_pts, \"maximo\": 25 },
+        \"contenedores\": { \"obtenido\": $contenedores_pts, \"maximo\": 20 },
+        \"bases_datos\": { \"obtenido\": $bd_funcionamiento_pts, \"maximo\": 15 },
+        \"symmetricds\": { \"obtenido\": $symmetricds_pts, \"maximo\": 20 },
+        \"replicacion_manual\": { \"obtenido\": \"revisar_replication-proofs\", \"maximo\": 20 }
       },
       \"detalles\": {
         \"tests_pasados\": $tests_passed,
@@ -341,7 +344,8 @@ calificar_estudiante() {
         \"tablas_negocio\": 4,
         \"tablas_symmetricds_pg\": $sym_tables,
         \"tablas_symmetricds_mysql\": $sym_tables_mysql,
-        \"servicios_docker\": 4
+        \"servicios_docker\": 4,
+        \"carpeta_evidencias\": \"replication-proofs/\"
       }
     }")
     
