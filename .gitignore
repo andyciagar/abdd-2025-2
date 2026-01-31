@@ -1,6 +1,0 @@
-globalshop/data/
-globalshop/mysql_data/
-globalshop/pg_data/
-*.sock
-*.opts
-.DS_Store
